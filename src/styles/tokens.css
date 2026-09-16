@@ -1,0 +1,130 @@
+/* SEI base design tokens. Edition themes override these variables, not components. */
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-text: #201e1d;
+  --color-accent: #256a42;
+  --color-divider: color-mix(in srgb, #201e1d 15%, transparent);
+
+  /* 100 is the lightest shade; 900 is the darkest. */
+  --color-neutral-100: #fafafa;
+  --color-neutral-200: #f0f0f0;
+  --color-neutral-300: #d7d3d3;
+  --color-neutral-400: #bab6b6;
+  --color-neutral-500: #9b9797;
+  --color-neutral-600: #7d7979;
+  --color-neutral-700: #605d5d;
+  --color-neutral-800: #444141;
+  --color-neutral-900: #2d2b2b;
+
+  --color-accent-100: #ecf8f1;
+  --color-accent-200: #d2efde;
+  --color-accent-300: #a4dfbd;
+  --color-accent-400: #68ca91;
+  --color-accent-500: #328f59;
+  --color-accent-600: #256a42;
+  --color-accent-700: #1a4c2f;
+  --color-accent-800: #143923;
+  --color-accent-900: #0d2618;
+
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-heading-weight: 800;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-20: 80px;
+  --space-22: 88px;
+
+  --font-size-2xs: 10px;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-16: 16px;
+  --font-size-17: 17px;
+  --font-size-20: 20px;
+  --font-size-26: 26px;
+  --font-size-32: 32px;
+  --font-size-34: 34px;
+  --font-size-38: 38px;
+  --font-size-40: 40px;
+  --font-size-42: 42px;
+  --font-size-46: 46px;
+  --font-size-66: 66px;
+  --font-size-420: 420px;
+  --font-size-lg: 30px;
+  --font-size-2xl: 60px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2d2b2b 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2d2b2b 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2d2b2b 22%, transparent);
+
+  /* Shared hover/interaction transition — components reference this
+     instead of hardcoding a duration/easing per rule. */
+  --transition-fast: 160ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0s;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}

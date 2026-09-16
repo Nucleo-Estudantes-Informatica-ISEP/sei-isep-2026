@@ -1,0 +1,288 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import {
+  languages,
+  getLangFromUrl,
+  useTranslations,
+  langLabels,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Strip the current locale prefix so getRelativeLocaleUrl gets a bare path.
+// This is a fully static build, so Astro.url never carries a real query
+// string/hash at build time — the client script below patches those in
+// from window.location once the page has actually loaded.
+const rest = Astro.url.pathname.replace(new RegExp(`^/${lang}/?`), "");
+
+// Unique per render so aria-controls/id stay a valid pairing even if this
+// component is ever rendered more than once on the same page.
+const menuId = `language-menu-${crypto.randomUUID().slice(0, 8)}`;
+---
+
+<div class="lang-switcher">
+  <button
+    type="button"
+    class="lang-toggle"
+    aria-controls={menuId}
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-label={t("languageSwitcher.label")}
+  >
+    <span class="flag">
+      {
+        lang === "en" ? (
+          <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true">
+            <rect width="20" height="20" fill="#012169" />
+            <path d="M0 0L20 20M20 0L0 20" stroke="#fff" stroke-width="3" />
+            <path
+              d="M0 0L20 20M20 0L0 20"
+              stroke="#C8102E"
+              stroke-width="1.4"
+            />
+            <path d="M10 0V20M0 10H20" stroke="#fff" stroke-width="5" />
+            <path d="M10 0V20M0 10H20" stroke="#C8102E" stroke-width="2.6" />
+          </svg>
+        ) : (
+          <svg width="17" height="17" viewBox="0 0 20 20" aria-hidden="true">
+            <rect width="20" height="20" fill="#FF0000" />
+            <rect width="8" height="20" fill="#006600" />
+            <circle
+              cx="8"
+              cy="10"
+              r="4"
+              fill="#FFCC00"
+              stroke="#fff"
+              stroke-width="0.5"
+            />
+          </svg>
+        )
+      }
+    </span>
+  </button>
+  <div id={menuId} class="lang-menu" hidden>
+    {
+      languages.map((code) => (
+        <a
+          href={getRelativeLocaleUrl(code, rest)}
+          class="lang-option"
+          aria-current={code === lang ? "true" : undefined}
+        >
+          <span class="flag flag-option">
+            {code === "en" ? (
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <rect width="20" height="20" fill="#012169" />
+                <path d="M0 0L20 20M20 0L0 20" stroke="#fff" stroke-width="3" />
+                <path
+                  d="M0 0L20 20M20 0L0 20"
+                  stroke="#C8102E"
+                  stroke-width="1.4"
+                />
+                <path d="M10 0V20M0 10H20" stroke="#fff" stroke-width="5" />
+                <path
+                  d="M10 0V20M0 10H20"
+                  stroke="#C8102E"
+                  stroke-width="2.6"
+                />
+              </svg>
+            ) : (
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <rect width="20" height="20" fill="#FF0000" />
+                <rect width="8" height="20" fill="#006600" />
+                <circle
+                  cx="8"
+                  cy="10"
+                  r="4"
+                  fill="#FFCC00"
+                  stroke="#fff"
+                  stroke-width="0.5"
+                />
+              </svg>
+            )}
+          </span>
+          <span>{langLabels[code]}</span>
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  // The href baked into each option at build time only carries the page's
+  // path — this is a static build, so the query string/hash that's actually
+  // in the address bar is only known once the browser has loaded the page.
+  // Patch it in here so switching locale doesn't drop it.
+  const { search, hash } = window.location;
+  if (search || hash) {
+    document
+      .querySelectorAll<HTMLAnchorElement>(".lang-option")
+      .forEach((option) => {
+        option.href += search + hash;
+      });
+  }
+
+  document.querySelectorAll<HTMLElement>(".lang-switcher").forEach((root) => {
+    const toggle = root.querySelector<HTMLButtonElement>(".lang-toggle");
+    const menu = root.querySelector<HTMLElement>(".lang-menu");
+    if (!toggle || !menu) return;
+
+    const items = Array.from(
+      menu.querySelectorAll<HTMLAnchorElement>(".lang-option"),
+    );
+
+    // Plain disclosure list: every link keeps its natural tabindex, so
+    // Tab/Shift+Tab walk through all of them like any other link list.
+    // Arrow keys/Home/End are an added UX shortcut that just move focus
+    // between items — they don't remove anything from the tab order.
+    const close = (returnFocus = false) => {
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded", "false");
+      if (returnFocus) toggle.focus();
+    };
+
+    const open = (focusItem: "first" | "last" | "none") => {
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+      if (focusItem === "none") return;
+      items[focusItem === "first" ? 0 : items.length - 1]?.focus();
+    };
+
+    toggle.addEventListener("click", (event) => {
+      if (menu.hidden) {
+        // A real mouse click has event.detail >= 1; a "click" dispatched by
+        // pressing Enter/Space on the button has detail 0. Only steal focus
+        // for the latter — a mouse user shouldn't have focus yanked into
+        // the panel just for opening it.
+        open(event.detail === 0 ? "first" : "none");
+      } else close();
+    });
+
+    toggle.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault();
+        open(event.key === "ArrowDown" ? "first" : "last");
+      } else if (event.key === "Escape" && !menu.hidden) {
+        // Covers the mouse-click-to-open case, where focus stays on the
+        // toggle rather than moving into the menu — the menu's own Escape
+        // handler below only fires once focus is inside it.
+        close();
+      }
+    });
+
+    menu.addEventListener("keydown", (event) => {
+      const currentIndex = items.indexOf(
+        document.activeElement as HTMLAnchorElement,
+      );
+
+      switch (event.key) {
+        case "ArrowDown": {
+          event.preventDefault();
+          items[(currentIndex + 1) % items.length]?.focus();
+          break;
+        }
+        case "ArrowUp": {
+          event.preventDefault();
+          items[(currentIndex - 1 + items.length) % items.length]?.focus();
+          break;
+        }
+        case "Home": {
+          event.preventDefault();
+          items[0]?.focus();
+          break;
+        }
+        case "End": {
+          event.preventDefault();
+          items[items.length - 1]?.focus();
+          break;
+        }
+        case "Escape": {
+          close(true);
+          break;
+        }
+      }
+    });
+
+    // Every item is a normal tab stop now, so closing on Tab-out is driven
+    // by focus actually leaving the switcher rather than guessing which
+    // item/direction a Tab keypress came from.
+    root.addEventListener("focusout", (event) => {
+      if (!root.contains(event.relatedTarget as Node | null)) close();
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!root.contains(event.target as Node)) close();
+    });
+  });
+</script>
+
+<style>
+  .lang-switcher {
+    position: relative;
+  }
+
+  .lang-toggle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--color-neutral-400);
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flag {
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    flex: none;
+    line-height: 0;
+  }
+
+  .lang-menu {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    background: var(--color-bg);
+    border: 2px solid var(--color-divider);
+    min-width: 170px;
+    z-index: 40;
+  }
+
+  .lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-bottom: 1px solid var(--color-divider);
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: background-color var(--transition-fast);
+  }
+
+  .lang-option:last-child {
+    border-bottom: none;
+  }
+
+  .lang-option:hover {
+    background: color-mix(in srgb, var(--color-text) 6%, transparent);
+  }
+</style>

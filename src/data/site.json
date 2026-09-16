@@ -1,0 +1,105 @@
+{
+  "edition": {
+    "name": "SEI'26",
+    "fullName": null,
+    "year": 2026
+  },
+  "seo": {
+    "description": "SEI'26 — Symposium on Engineering and Innovation at ISEP.",
+    "ogImage": "/images/design-review/banner.webp"
+  },
+  "pages": {
+    "home": "",
+    "program": "program",
+    "speakers": "speakers",
+    "committees": "committees",
+    "submissions": "submissions",
+    "history": "history",
+    "registration": "registration"
+  },
+  "importantDates": [
+    {
+      "id": "paperSubmission",
+      "date": null
+    },
+    {
+      "id": "acceptanceNotification",
+      "date": null
+    },
+    {
+      "id": "cameraReady",
+      "date": null
+    },
+    {
+      "id": "symposiumInscription",
+      "date": null
+    },
+    {
+      "id": "symposiumDay",
+      "date": null
+    }
+  ],
+  "links": {
+    "easyChairSubmission": null,
+    "easyChairProgram": null,
+    "registration": null,
+    "proceedings": null,
+    "lncsTemplateLatex": "https://link.springer.com/series/558/information-for-authors-and-editors",
+    "lncsTemplateWord": "https://link.springer.com/series/558/information-for-authors-and-editors",
+    "callForPapers": null
+  },
+  "images": {
+    "banner": "/images/design-review/banner.webp",
+    "eventPhoto": "/images/design-review/about.webp",
+    "proceedingsCover": "/images/design-review/proceedings.webp",
+    "logo": "/images/sei-logo.png",
+    "qrCode": null
+  },
+  "contact": {
+    "email": "sei@dei.isep.ipp.pt"
+  },
+  "social": {
+    "linkedin": null
+  },
+  "venue": {
+    "name": "Instituto Superior de Engenharia do Porto",
+    "addressLine1": "Rua Dr. António Bernardino de Almeida, 431",
+    "postalCode": "4249-015",
+    "city": "Porto",
+    "country": "Portugal"
+  },
+  "footerLogos": [
+    {
+      "src": "/images/dei-informatica.png",
+      "alt": "Departamento de Engenharia Informática",
+      "href": null
+    },
+    {
+      "src": "/images/nei-isep.png",
+      "alt": "NEI-ISEP",
+      "href": null
+    },
+    {
+      "src": "/images/isep.png",
+      "alt": "ISEP",
+      "href": null
+    }
+  ],
+  "supportLogos": [
+    {
+      "src": null,
+      "alt": "Logo de apoio 1",
+      "href": null
+    },
+    {
+      "src": null,
+      "alt": "Logo de apoio 2",
+      "href": null
+    },
+    {
+      "src": null,
+      "alt": "Logo de apoio 3",
+      "href": null
+    }
+  ]
+}
