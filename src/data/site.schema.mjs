@@ -1,0 +1,93 @@
+import { z } from "zod";
+import {
+  publicAssetPath,
+  optionalUrl,
+  yearSchema,
+  routeSlug,
+} from "./primitives.schema.mjs";
+
+export const siteConfigSchema = z.object({
+  edition: z.object({
+    name: z.string().min(1),
+    fullName: z.string().min(1).nullable(),
+    year: yearSchema,
+  }),
+  seo: z.object({
+    description: z.string().min(1),
+    ogImage: publicAssetPath,
+  }),
+  pages: z.object({
+    home: z.literal(""),
+    program: routeSlug,
+    speakers: routeSlug,
+    committees: routeSlug,
+    submissions: routeSlug,
+    history: routeSlug,
+    registration: routeSlug,
+  }),
+  importantDates: z
+    .array(
+      z.object({
+        id: z.enum([
+          "paperSubmission",
+          "acceptanceNotification",
+          "cameraReady",
+          "symposiumInscription",
+          "symposiumDay",
+        ]),
+        date: z.iso.date().nullable(),
+      }),
+    )
+    .length(5)
+    .refine((dates) => new Set(dates.map((entry) => entry.id)).size === 5, {
+      message:
+        "importantDates must include each of the 5 fixed ids exactly once",
+    }),
+  links: z.object({
+    easyChairSubmission: optionalUrl,
+    easyChairProgram: optionalUrl,
+    registration: optionalUrl,
+    proceedings: optionalUrl,
+    lncsTemplateLatex: optionalUrl,
+    lncsTemplateWord: optionalUrl,
+    callForPapers: optionalUrl,
+  }),
+  images: z.object({
+    banner: publicAssetPath.nullable(),
+    eventPhoto: publicAssetPath.nullable(),
+    proceedingsCover: publicAssetPath.nullable(),
+    logo: publicAssetPath.nullable(),
+    qrCode: publicAssetPath.nullable(),
+  }),
+  contact: z.object({
+    email: z.email(),
+  }),
+  social: z.object({
+    linkedin: optionalUrl,
+  }),
+  venue: z.object({
+    name: z.string().min(1),
+    addressLine1: z.string().min(1),
+    postalCode: z.string().min(1),
+    city: z.string().min(1),
+    country: z.string().min(1),
+  }),
+  footerLogos: z
+    .array(
+      z.object({
+        src: publicAssetPath.nullable(),
+        alt: z.string().min(1),
+        href: optionalUrl,
+      }),
+    )
+    .min(1),
+  supportLogos: z
+    .array(
+      z.object({
+        src: publicAssetPath.nullable(),
+        alt: z.string().min(1),
+        href: optionalUrl,
+      }),
+    )
+    .length(3),
+});
