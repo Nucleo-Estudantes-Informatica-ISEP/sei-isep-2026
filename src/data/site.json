@@ -20,15 +20,15 @@
   "importantDates": [
     {
       "id": "paperSubmission",
-      "date": null
+      "date": "2026-10-11"
     },
     {
       "id": "acceptanceNotification",
-      "date": null
+      "date": "2026-10-28"
     },
     {
       "id": "cameraReady",
-      "date": null
+      "date": "2026-11-15"
     },
     {
       "id": "symposiumInscription",
@@ -36,11 +36,11 @@
     },
     {
       "id": "symposiumDay",
-      "date": null
+      "date": "2026-11-25"
     }
   ],
   "links": {
-    "easyChairSubmission": null,
+    "easyChairSubmission": "https://easychair.org/conferences?conf=sei26",
     "easyChairProgram": null,
     "registration": null,
     "proceedings": null,
