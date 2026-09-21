@@ -5,7 +5,7 @@ Template for SEI Websites
 ## Setting up a new edition
 
 Forking this template for a new SEI edition? See the
-[template usage guide](docs/usage-guide.md) for which file to edit for each
+[edition setup guide](docs/edition-setup.md) for which file to edit for each
 mechanism — site config, per-page content, translations, and re-skinning.
 
 ## Design review sample content
@@ -13,7 +13,7 @@ mechanism — site config, per-page content, translations, and re-skinning.
 `chore/design-review` includes mock speaker profiles, committee lists and
 illustrative images from the supplied Figma exports. These are design fixtures,
 not confirmed SEI participants or photographs documenting previous editions.
-Replace them in `src/data/` and `public/images/design-review/` for each edition.
+Replace them in `src/data/<domain>/` and `public/images/` for each edition.
 
 Speaker roles and biographies, gallery labels and image descriptions accept
 either a plain string or an `{ "en": "...", "pt": "..." }` object.
