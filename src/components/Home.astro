@@ -103,13 +103,6 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
       />
     )
   }
-  {
-    !site.images.banner && (
-      <div class="hero__26" aria-hidden="true">
-        {site.edition.year.toString().slice(-2)}
-      </div>
-    )
-  }
   <div class="hero__inner">
     <div class="hero__content">
       <div class="hero__eyebrow">
@@ -557,16 +550,16 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
     margin: 0 auto;
     padding: 160px var(--space-14) var(--space-22);
   }
-  .hero:has(.hero__banner) {
-    padding-top: calc(var(--space-22) + var(--space-6));
-  }
   .hero__banner {
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
   .hero:has(.hero__banner) .hero__inner {
-    padding-top: var(--space-12);
+    position: relative;
+    padding-top: calc(var(--space-22) + var(--space-6));
   }
   .hero__background {
     position: absolute;
@@ -585,22 +578,18 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
       var(--color-neutral-300) 20px
     );
   }
-  .hero__26 {
-    position: absolute;
-    right: var(--space-10);
-    top: calc(var(--space-10) * -1);
-    font-size: var(--font-size-420);
-    line-height: 0.8;
-    font-weight: 800;
-    color: transparent;
-    -webkit-text-stroke: 2px var(--color-accent-700);
-    opacity: 0.55;
-    pointer-events: none;
-    user-select: none;
-  }
   .hero__content {
     position: relative;
     max-width: 720px;
+    /* frosted-glass panel tinted with the banner colour: blurs the banner
+       behind the copy so it stays legible without hiding the banner */
+    padding: var(--space-10) var(--space-12);
+    background: color-mix(in srgb, var(--color-accent-700) 55%, transparent);
+    backdrop-filter: blur(40px) saturate(140%);
+    border: 1px solid
+      color-mix(in srgb, var(--color-neutral-100) 18%, transparent);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
   }
   .hero__eyebrow {
     display: flex;
@@ -631,7 +620,7 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
   }
   .hero__description {
     line-height: 1.7;
-    color: var(--color-neutral-300);
+    color: var(--color-neutral-200);
     max-width: 520px;
     margin: 0 0 var(--space-9);
   }
@@ -1083,6 +1072,9 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
     .hero__title {
       font-size: var(--font-size-42);
     }
+    .hero__content {
+      padding: var(--space-7) var(--space-6);
+    }
   }
 
   @media (max-width: 768px) {
@@ -1115,10 +1107,6 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
 
     .closing__actions .btn {
       justify-content: center;
-    }
-
-    .hero__26 {
-      display: none;
     }
   }
 </style>
