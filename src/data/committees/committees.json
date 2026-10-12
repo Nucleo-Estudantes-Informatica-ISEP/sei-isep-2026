@@ -37,5 +37,41 @@
       "org": "ISEP"
     }
   ],
-  "scientific": []
+  "scientific": [
+    { "name": "Alexandre Gouveia", "org": "ISEP" },
+    { "name": "Álvaro Rocha", "org": "ISEG" },
+    { "name": "Ana Madureira", "org": "ISEP" },
+    { "name": "Ana Paula Camarinha", "org": "ISCAP" },
+    { "name": "Ana Rita Teixeira", "org": "ISEP" },
+    { "name": "Anabela Serrano", "org": "ISCAP" },
+    { "name": "Augusto Sousa", "org": "FEUP" },
+    { "name": "Bertil Marques", "org": "ISEP" },
+    { "name": "Catarina Oliveira", "org": "ISEP" },
+    { "name": "Constantino Martins", "org": "ISEP" },
+    { "name": "Dulce Mota", "org": "ISEP" },
+    { "name": "Fátima Rodrigues", "org": "ISEP" },
+    { "name": "Helder Pinto", "org": "ISEP" },
+    { "name": "Isabel Sampaio", "org": "ISEP" },
+    { "name": "João Pascoal Faria", "org": "FEUP" },
+    { "name": "Joaquim Filipe Santos", "org": "ISEP" },
+    { "name": "Jorge Duarte", "org": "ISEP" },
+    { "name": "José Reis Tavares", "org": "ISEP" },
+    { "name": "Luís Alves", "org": "IPB" },
+    { "name": "Luis Nogueira", "org": "ISEP" },
+    { "name": "Marílio Cardoso", "org": "ISEP" },
+    { "name": "Mário Cruz", "org": "ESE" },
+    { "name": "Mário Pinto", "org": "ESMAD" },
+    { "name": "Orlando Sousa", "org": "ISEP" },
+    { "name": "Paula Tavares", "org": "ISEP" },
+    { "name": "Paulo Maio", "org": "ISEP" },
+    { "name": "Paulo Matos", "org": "ISEP" },
+    { "name": "Paulo Oliveira", "org": "ISEP" },
+    { "name": "Pedro Pinto", "org": "ISEP" },
+    { "name": "Raquel Faria", "org": "ISEP" },
+    { "name": "Ricardo Almeida", "org": "ISEP" },
+    { "name": "Rosa Reis", "org": "ISEP" },
+    { "name": "Rui Soares", "org": "ESTG" },
+    { "name": "Telmo Matos", "org": "ISEP" },
+    { "name": "Teresa Terroso", "org": "ESMAD" }
+  ]
 }

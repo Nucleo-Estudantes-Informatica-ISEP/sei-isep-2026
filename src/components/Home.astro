@@ -89,9 +89,11 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
   {
     site.images.banner ? (
       <img
-        class="hero__background"
+        class="hero__banner"
         src={site.images.banner}
-        alt=""
+        alt={t("home.hero.bannerAlt")}
+        width="2965"
+        height="939"
         fetchpriority="high"
       />
     ) : (
@@ -101,9 +103,13 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
       />
     )
   }
-  <div class="hero__26" aria-hidden="true">
-    {site.edition.year.toString().slice(-2)}
-  </div>
+  {
+    !site.images.banner && (
+      <div class="hero__26" aria-hidden="true">
+        {site.edition.year.toString().slice(-2)}
+      </div>
+    )
+  }
   <div class="hero__inner">
     <div class="hero__content">
       <div class="hero__eyebrow">
@@ -550,6 +556,17 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
     max-width: 1440px;
     margin: 0 auto;
     padding: 160px var(--space-14) var(--space-22);
+  }
+  .hero:has(.hero__banner) {
+    padding-top: calc(var(--space-22) + var(--space-6));
+  }
+  .hero__banner {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .hero:has(.hero__banner) .hero__inner {
+    padding-top: var(--space-12);
   }
   .hero__background {
     position: absolute;
