@@ -42,7 +42,7 @@
   "links": {
     "easyChairSubmission": "https://easychair.org/conferences?conf=sei26",
     "easyChairProgram": null,
-    "registration": null,
+    "registration": "https://forms.cloud.microsoft/e/U5Tujy9nBF",
     "proceedings": null,
     "lncsTemplateLatex": "https://link.springer.com/series/558/information-for-authors-and-editors",
     "lncsTemplateWord": "https://link.springer.com/series/558/information-for-authors-and-editors",
@@ -53,7 +53,7 @@
     "eventPhoto": "/images/edition/about.webp",
     "proceedingsCover": "/images/edition/proceedings.webp",
     "logo": "/images/logos/sei-logo.png",
-    "qrCode": null
+    "qrCode": "/images/edition/registration-qr.png"
   },
   "contact": {
     "email": "sei@dei.isep.ipp.pt"
