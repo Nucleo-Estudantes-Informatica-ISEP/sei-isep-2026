@@ -33,9 +33,7 @@ const links = {
   speakers: getRelativeLocaleUrl(lang, site.pages.speakers),
   committees: getRelativeLocaleUrl(lang, site.pages.committees),
   submissions: getRelativeLocaleUrl(lang, site.pages.submissions),
-  // No internal /registration page yet (#16) — CTA only appears once an
-  // external registration link is configured, matching the proceedings CTA.
-  registration: site.links.registration,
+  registration: getRelativeLocaleUrl(lang, site.pages.registration),
   proceedings: site.links.proceedings,
 };
 
@@ -150,15 +148,9 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
         {tt("home.registration.description", { edition: site.edition.name })}
       </p>
     </div>
-    {
-      links.registration ? (
-        <a class="btn btn--dark" href={links.registration}>
-          {t("home.registration.cta")}
-        </a>
-      ) : (
-        <p class="muted muted--small">{t("home.registration.pending")}</p>
-      )
-    }
+    <a class="btn btn--dark" href={links.registration}>
+      {t("home.registration.cta")}
+    </a>
   </div>
 </section>
 
@@ -388,13 +380,9 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
     }
   </p>
   <div class="closing__actions">
-    {
-      links.registration && (
-        <a class="btn btn--accent" href={links.registration}>
-          {t("home.closing.registerCta")}
-        </a>
-      )
-    }
+    <a class="btn btn--accent" href={links.registration}>
+      {t("home.closing.registerCta")}
+    </a>
     <a class="btn btn--outline" href={links.program}>
       {t("home.closing.programCta")}
     </a>
