@@ -1,1 +1,108 @@
-[]
+[
+  {
+    "name": "Gil Lopes",
+    "role": {
+      "en": "Keynote speaker · Robotics: Physical Artificial Intelligence",
+      "pt": "Orador principal · Robótica: Inteligência Artificial física"
+    },
+    "affiliation": "ISEP",
+    "bio": {
+      "en": "Assistant Professor at ISEP with a PhD in Informatics Engineering from Cranfield University (UK), where he specialised in automation, control and robotics with a focus on sensory perception for welding processes. At Cranfield he also carried out postdoctoral projects on the control and automation of laser additive manufacturing with titanium alloys, and on the automation of welding the torus of the ITER nuclear fusion reactor. He holds a degree in Applied Mathematics and Informatics from Universidade Portucalense, and his teaching career includes Universidade da Maia and Universidade do Minho, with more than sixty course units taught across all three cycles of higher education in areas such as Robotics, Computer Vision, Automation, IoT, Computer Architecture and Control. On the scientific side, he is a researcher at GECAD, focused on Autonomous Mobile Robotics, Computer Vision and Artificial Intelligence, within robotic perception, robotic navigation and human/robot interfaces. He has dozens of published papers, has led and taken part in funded projects, and has supervised and assessed more than two hundred bachelor's, master's and doctoral theses. He is a founding member of the Portuguese Robotics Society, where he has served as Chair of the Fiscal Council and is currently Secretary of the General Assembly. He has been an organiser of the educational event RoboParty since 2008 and of national and international robotics events, and has taken part in several world robotics competitions since 2002.",
+      "pt": "Professor Auxiliar no ISEP e doutorado em Engenharia Informática pela Universidade de Cranfield no Reino Unido, onde se especializou em Automação, Controlo e Robótica com foco em perceção sensorial para processos de soldadura. Realizou também na Universidade de Cranfield, projetos de pós-doutoramento aplicados ao controlo e automação de manufatura aditiva com laser e ligas de titânio, bem como na automação da soldadura do torus do reator de fusão nuclear ITER. Com licenciatura em Informática Matemáticas Aplicadas pela Universidade Portucalense, conta no seu percurso docente a passagem pela Universidade da Maia e pela Universidade do Minho, tendo já lecionado mais de sessenta unidades curriculares nos três ciclos do ensino superior em áreas como Robótica, Visão por Computador, Automação, IoT, Arquitetura de Computadores, Controlo, entre outras. Na componente científica, é atualmente investigador do GECAD, com foco em Robótica Móvel Autónoma, Visão por Computador e Inteligência Artificial, no âmbito da perceção robótica, navegação robótica e interface humano/robô. Soma largas dezenas de artigos publicados, liderança e participação em projetos financiados, a orientação e avaliação de mais de duas centenas de trabalhos académicos de licenciatura, de mestrado e de doutoramento. É também membro fundador da Sociedade Portuguesa de Robótica, onde já foi Presidente do Conselho Fiscal e onde atualmente é Secretário da Assembleia Geral. É membro organizador do evento pedagógico RoboParty desde 2008 e de eventos de Robótica Nacional e Internacional, bem como participante em várias competições mundiais de robótica desde 2002."
+    },
+    "photo": "/images/speakers/gil-lopes.webp",
+    "links": []
+  },
+  {
+    "name": "Nuno Pereira",
+    "role": {
+      "en": "Roundtable moderator · Starting a Cybersecurity Career in the Age of AI",
+      "pt": "Moderador da mesa-redonda · Começar uma Carreira em Cibersegurança na Era da IA"
+    },
+    "affiliation": "ISEP",
+    "bio": {
+      "en": "Assistant Professor at ISEP with over 20 years of experience in teaching, research and industry collaboration, specializing in real-time and embedded systems, IoT, cybersecurity, and more recently augmented reality and edge computing; he holds a PhD from the University of Minho (2010). From 2019 to 2022 he was a Visiting Scholar at Carnegie Mellon University, where he served as Executive Director of the CONIX research center, coordinating over 150 researchers across seven major US universities, co-taught Introduction to Embedded Systems, and was a main contributor to ARENA, an edge networking platform for mixed reality applications. On the industry side, he has conducted cybersecurity audits for Portuguese companies and is a co-inventor of more than 10 granted or pending patents, most of which result from industry collaborations, including work with Bosch and CMU. He has authored over 75 scientific publications and participated in more than 15 research projects (including 3 as Principal Investigator), with prior visiting positions at Mid-Sweden University and CMU in 2017.",
+      "pt": "Professor Auxiliar no ISEP com mais de 20 anos de experiência em ensino, investigação e colaboração com a indústria, especializado em sistemas embebidos e de tempo real, IoT, cibersegurança e, mais recentemente, realidade aumentada e edge computing; é doutorado pela Universidade do Minho (2010). Entre 2019 e 2022 foi Visiting Scholar na Carnegie Mellon University, onde foi Diretor Executivo do centro de investigação CONIX, coordenando mais de 150 investigadores de sete grandes universidades norte-americanas, lecionou em coautoria a unidade curricular de Introdução aos Sistemas Embebidos e foi um dos principais contribuidores do ARENA, uma plataforma de edge networking para aplicações de realidade mista. Na vertente industrial, realizou auditorias de cibersegurança a empresas portuguesas e é coinventor de mais de 10 patentes concedidas ou pendentes, na sua maioria resultantes de colaborações com a indústria, incluindo trabalho com a Bosch e a CMU. É autor de mais de 75 publicações científicas e participou em mais de 15 projetos de investigação (3 dos quais como Investigador Principal), tendo ainda sido investigador visitante na Mid-Sweden University e na CMU em 2017."
+    },
+    "photo": "/images/speakers/nuno-pereira.webp",
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/napereira/" }
+    ]
+  },
+  {
+    "name": "Rolando Martins",
+    "role": {
+      "en": "Roundtable panelist · Starting a Cybersecurity Career in the Age of AI",
+      "pt": "Participante na mesa-redonda · Começar uma Carreira em Cibersegurança na Era da IA"
+    },
+    "affiliation": "FCUP · Founder of SafeHelm",
+    "bio": {
+      "en": "A cybersecurity and privacy researcher at FCUP (Department of Computer Science), where he has taught since 2016 and is vice-president of C3P; he earned his bachelor's, master's and PhD in computer science at the University of Porto. His company work is extensive: he spent 12 years in R&D at EFACEC, then 3 years as a postdoc at Carnegie Mellon University. That experience led to Iris, a University of Porto patent granted in 2022 that lets phones share live-streamed content directly with each other at stadiums and concerts, cutting network load by up to 12 times in lab tests. He is also the founder of SafeHelm, a U.Porto startup spin-off created to commercialize the technology. At FCUP, he coordinated THEIA with Bosch on autonomous driving and now works on its broader successor, Atlas, which adds ethics and law expertise.",
+      "pt": "Investigador em cibersegurança e privacidade na FCUP (Departamento de Ciência de Computadores), onde leciona desde 2016 e é vice-presidente do C3P; é licenciado, mestre e doutorado em Ciência de Computadores pela Universidade do Porto. O seu trabalho em contexto empresarial é vasto: passou 12 anos em I&D na EFACEC e depois 3 anos como pós-doutorado na Carnegie Mellon University. Essa experiência levou ao Iris, uma patente da Universidade do Porto concedida em 2022 que permite a telemóveis partilhar diretamente entre si conteúdo em direto em estádios e concertos, reduzindo a carga na rede até 12 vezes em testes de laboratório. É também fundador da SafeHelm, uma spin-off da U.Porto criada para comercializar a tecnologia. Na FCUP, coordenou o THEIA com a Bosch, na área da condução autónoma, e trabalha agora no seu sucessor mais abrangente, o Atlas, que acrescenta competências em ética e direito."
+    },
+    "photo": "/images/speakers/rolando-martins.webp",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/rolandomartins/"
+      }
+    ]
+  },
+  {
+    "name": "Pedro Fortuna",
+    "role": {
+      "en": "Roundtable panelist · Starting a Cybersecurity Career in the Age of AI",
+      "pt": "Participante na mesa-redonda · Começar uma Carreira em Cibersegurança na Era da IA"
+    },
+    "affiliation": "Jscrambler",
+    "bio": {
+      "en": "Co-founder and CTO at Jscrambler where he is responsible for setting the vision and technical directions of the company. Leads all R&D and Product development and is responsible for the product roadmap. He drives the company innovation with new ideas and research directions. Leads from ideas to product, and from product to the market. Inventor and co-author of several patents in AppSec. Contributes to the company positioning, bringing market context and feedback. Identifies opportunities and educates the market on Jscrambler technology. Speaker at several AppSec and Dev events, such as DEFCON, AppSec EU, BSides, and more.",
+      "pt": "Cofundador e CTO da Jscrambler, onde é responsável por definir a visão e as direções técnicas da empresa. Lidera toda a área de I&D e o desenvolvimento de produto e é responsável pelo roadmap do produto. Impulsiona a inovação da empresa com novas ideias e linhas de investigação. Conduz o percurso desde a ideia até ao produto, e do produto até ao mercado. Inventor e coautor de várias patentes em AppSec. Contribui para o posicionamento da empresa, trazendo contexto e feedback do mercado. Identifica oportunidades e educa o mercado sobre a tecnologia da Jscrambler. Orador em vários eventos de AppSec e desenvolvimento, como DEFCON, AppSec EU, BSides, entre outros."
+    },
+    "photo": "/images/speakers/pedro-fortuna.webp",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/pedrofortuna/"
+      }
+    ]
+  },
+  {
+    "name": "Ricardo Almeida",
+    "role": {
+      "en": "Roundtable panelist · Starting a Cybersecurity Career in the Age of AI",
+      "pt": "Participante na mesa-redonda · Começar uma Carreira em Cibersegurança na Era da IA"
+    },
+    "affiliation": "OLX Group",
+    "bio": {
+      "en": "Ricardo Almeida is a Lead Security Engineer at OLX Group who has spent nearly two decades on both sides of the keyboard: first keeping systems running as a sysadmin, then finding creative ways to break them. Based in Porto, he is an OSCP-certified penetration tester and red team operator whose résumé spans e-commerce giants, fintech, and banking, from Jumia and Farfetch to Natixis. Alongside his full-time role, he works as a freelance penetration tester and red team operator with Agile Information Security and Ethiack, and previously did so for Cobalt.io and Char49. He has landed spots in the Google Application Security and EU-CERT Halls of Fame and has a couple of CVEs to his name. He specializes in offensive, application, and infrastructure security, as well as PCI-DSS compliance.",
+      "pt": "Ricardo Almeida é Lead Security Engineer no OLX Group e passou quase duas décadas dos dois lados do teclado: primeiro a manter sistemas em funcionamento como sysadmin, depois a encontrar formas criativas de os quebrar. Sediado no Porto, é pentester e red team operator certificado OSCP, com um percurso que abrange gigantes do e-commerce, fintech e banca, da Jumia e Farfetch à Natixis. Em paralelo com a sua função a tempo inteiro, trabalha como pentester e red team operator freelancer com a Agile Information Security e a Ethiack, e fê-lo anteriormente para a Cobalt.io e a Char49. Conquistou lugares nos Halls of Fame da Google Application Security e do EU-CERT e tem alguns CVEs em seu nome. Especializa-se em segurança ofensiva, de aplicações e de infraestrutura, bem como em conformidade PCI-DSS."
+    },
+    "photo": "/images/speakers/ricardo-almeida.webp",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ricardojbalmeida/"
+      }
+    ]
+  },
+  {
+    "name": "Paulo Mendes",
+    "role": {
+      "en": "Roundtable panelist · Starting a Cybersecurity Career in the Age of AI",
+      "pt": "Participante na mesa-redonda · Começar uma Carreira em Cibersegurança na Era da IA"
+    },
+    "affiliation": "Celfocus",
+    "bio": {
+      "en": "Application Security Engineer specializing in CI/CD pipeline automation and DevSecOps enablement. At Celfocus, he focuses on integrating robust security workflows (such as SAST, SCA, secrets management) into development lifecycles, optimizing build pipelines, and delivering internal training on secure coding and emerging AI security threats. He is passionate about turning security into a seamless part of the engineering process through automation and clear technical documentation.",
+      "pt": "Application Security Engineer especializado em automação de pipelines CI/CD e na adoção de DevSecOps. Na Celfocus, dedica-se a integrar fluxos de segurança robustos (como SAST, SCA e gestão de segredos) nos ciclos de desenvolvimento, a otimizar pipelines de build e a dar formação interna sobre programação segura e ameaças emergentes à segurança da IA. Tem paixão por tornar a segurança uma parte integrante do processo de engenharia através da automação e de documentação técnica clara."
+    },
+    "photo": "/images/speakers/paulo-mendes.webp",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/paulomendes3/"
+      }
+    ]
+  }
+]
