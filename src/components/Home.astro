@@ -392,31 +392,9 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
 <section class="partners">
   <div class="partners__inner">
     <div class="partners__label">{t("home.partners.organizedByLabel")}</div>
-    <div class="partners__logos partners__logos--bordered">
-      {
-        site.footerLogos.map((logo) =>
-          logo.src ? (
-            logo.href ? (
-              <a href={logo.href}>
-                <img src={logo.src} alt={logo.alt} />
-              </a>
-            ) : (
-              <img src={logo.src} alt={logo.alt} />
-            )
-          ) : (
-            <div class="partners__placeholder" aria-label={logo.alt}>
-              {t("home.partners.logoPlaceholder")}
-            </div>
-          ),
-        )
-      }
-    </div>
-    <div class="partners__label partners__label--support">
-      {t("home.partners.acknowledgementsLabel")}
-    </div>
     <div class="partners__logos">
       {
-        site.supportLogos.map((logo) =>
+        site.footerLogos.map((logo) =>
           logo.src ? (
             logo.href ? (
               <a href={logo.href}>
@@ -1009,13 +987,6 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  .partners__logos--bordered {
-    padding-bottom: var(--space-10);
-    border-bottom: 1px solid var(--color-neutral-700);
-  }
-  .partners__label--support {
-    margin-top: var(--space-8);
   }
   .partners__logos img {
     height: 48px;
