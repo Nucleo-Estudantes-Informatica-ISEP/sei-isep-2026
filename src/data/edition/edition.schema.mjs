@@ -81,4 +81,13 @@ export const siteConfigSchema = z.object({
       }),
     )
     .min(1),
+  supportLogos: z
+    .array(
+      z.object({
+        src: publicAssetPath.nullable(),
+        alt: z.string().min(1),
+        href: optionalUrl,
+      }),
+    )
+    .length(3),
 });

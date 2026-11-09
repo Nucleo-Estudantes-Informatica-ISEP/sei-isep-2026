@@ -84,5 +84,22 @@
       "alt": "ISEP",
       "href": null
     }
+  ],
+  "supportLogos": [
+    {
+      "src": null,
+      "alt": "Logo de apoio 1",
+      "href": null
+    },
+    {
+      "src": null,
+      "alt": "Logo de apoio 2",
+      "href": null
+    },
+    {
+      "src": null,
+      "alt": "Logo de apoio 3",
+      "href": null
+    }
   ]
 }
