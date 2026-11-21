@@ -1,1 +1,72 @@
-{}
+{
+  "a7fe608d12e073a7": {
+    "source": "Receção e inscrição",
+    "en": "Reception and registration",
+    "pt": "Receção e inscrição"
+  },
+  "ec3fb51f8159eef1": {
+    "source": "Sessão de abertura",
+    "en": "Opening session",
+    "pt": "Sessão de abertura"
+  },
+  "a8df0a6d8be127e7": {
+    "source": "Palestra: \"Robótica: Inteligência Artificial física\"",
+    "en": "Lecture: \"Robotics: Physical Artificial Intelligence\"",
+    "pt": "Palestra: \"Robótica: Inteligência Artificial física\""
+  },
+  "9f8cbe4acc6d8b83": {
+    "source": "Coffee break",
+    "en": "Coffee break",
+    "pt": "Pausa para o café"
+  },
+  "09be513ac6df2235": {
+    "source": "Mesa redonda: \"Começar uma Carreira em Cibersegurança na Era da IA”",
+    "en": "Roundtable discussion: \"Starting a Career in Cybersecurity in the Age of AI\"",
+    "pt": "Mesa redonda: \"Começar uma Carreira em Cibersegurança na Era da IA”"
+  },
+  "ffc21d8ba9b0e715": {
+    "source": "Lunch break",
+    "en": "Lunch break",
+    "pt": "Pausa para almoço"
+  },
+  "4b707a48c4999f18": {
+    "source": "Session 4A",
+    "en": "Session 4A",
+    "pt": "Sessão 4A"
+  },
+  "4cd656a28ea815be": {
+    "source": "Session 4B",
+    "en": "Session 4B",
+    "pt": "Sessão 4B"
+  },
+  "ed1540b5068b9e09": {
+    "source": "Session 4C",
+    "en": "Session 4C",
+    "pt": "Sessão 4C"
+  },
+  "d540110452d9ec43": {
+    "source": "Session 5A",
+    "en": "Session 5A",
+    "pt": "Sessão 5A"
+  },
+  "4c925c48af3e9969": {
+    "source": "Session 5B",
+    "en": "Session 5B",
+    "pt": "Sessão 5B"
+  },
+  "508efd277ea98982": {
+    "source": "Session 6A",
+    "en": "Session 6A",
+    "pt": "Sessão 6A"
+  },
+  "466cdd46b623e79c": {
+    "source": "Session 6B",
+    "en": "Session 6B",
+    "pt": "Sessão 6B"
+  },
+  "506429b0c227a193": {
+    "source": "Sessão encerramento",
+    "en": "Closing session",
+    "pt": "Sessão encerramento"
+  }
+}

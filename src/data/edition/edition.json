@@ -41,7 +41,7 @@
   ],
   "links": {
     "easyChairSubmission": "https://easychair.org/conferences?conf=sei26",
-    "easyChairProgram": null,
+    "easyChairProgram": "https://easychair.org/smart-program/SEI26/",
     "registration": "https://forms.cloud.microsoft/e/U5Tujy9nBF",
     "proceedings": null,
     "lncsTemplateLatex": "https://link.springer.com/series/558/information-for-authors-and-editors",
