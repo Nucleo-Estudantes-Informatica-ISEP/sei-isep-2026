@@ -68,5 +68,40 @@
     "source": "Sessão encerramento",
     "en": "Closing session",
     "pt": "Sessão encerramento"
+  },
+  "02c7ab2e8f8802cf": {
+    "source": "Arquiteturas Web e Plataformas Inteligentes: de IoT e RAG à Modernização de Sistemas Empresariais",
+    "en": "Web Architectures and Intelligent Platforms: From IoT and RAG to the Modernization of Enterprise Systems",
+    "pt": "Arquiteturas Web e Plataformas Inteligentes: de IoT e RAG à Modernização de Sistemas Empresariais"
+  },
+  "54c72a9775179f94": {
+    "source": "IA Generativa Aplicada: Rastreabilidade, Confiança e Fiabilidade em Aplicações Reais",
+    "en": "Applied Generative AI: Traceability, Trust, and Reliability in Real-World Applications",
+    "pt": "IA Generativa Aplicada: Rastreabilidade, Confiança e Fiabilidade em Aplicações Reais"
+  },
+  "d6b0395969be8762": {
+    "source": "IA & ML em Contexto Industrial e Empresarial: da Engenharia de Software à Análise Preditiva",
+    "en": "AI & ML in Industrial and Business Contexts: From Software Engineering to Predictive Analytics",
+    "pt": "IA & ML em Contexto Industrial e Empresarial: da Engenharia de Software à Análise Preditiva"
+  },
+  "f92731d334058d85": {
+    "source": "Cibersegurança Aplicada: Ferramentas e Abordagens Inteligentes para a Cibersegurança Operacional",
+    "en": "Applied Cybersecurity: Intelligent Tools and Approaches for Operational Cybersecurity",
+    "pt": "Cibersegurança Aplicada: Ferramentas e Abordagens Inteligentes para a Cibersegurança Operacional"
+  },
+  "0a3d9c1a53bee5c4": {
+    "source": "Engenharia de Software em Contexto Real: Resiliência, Integração e Reutilização de Dados",
+    "en": "Software Engineering in a Real-World Context: Data Resilience, Integration, and Reuse",
+    "pt": "Engenharia de Software em Contexto Real: Resiliência, Integração e Reutilização de Dados"
+  },
+  "8b8a518515659ef7": {
+    "source": "Arquiteturas Orientadas à Proteção de Dados e à Segurança em Contextos IoT e Empresariais",
+    "en": "Data Protection and Security-Oriented Architectures in IoT and Enterprise Contexts",
+    "pt": "Arquiteturas Orientadas à Proteção de Dados e à Segurança em Contextos IoT e Empresariais"
+  },
+  "72e68ab99b0e30b4": {
+    "source": "Boas Práticas e Arquiteturas Reativas: Estudos Aplicados em DevOps e Cloud-Native",
+    "en": "Best Practices and Reactive Architectures: Applied Studies in DevOps and Cloud-Native",
+    "pt": "Boas Práticas e Arquiteturas Reativas: Estudos Aplicados em DevOps e Cloud-Native"
   }
 }
