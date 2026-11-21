@@ -83,6 +83,7 @@ const dateBadge = formatDate(
 
                   <div class="schedule-content">
                     <div class="schedule-title">
+                      {item.label && `${t("program.session")} ${item.label}: `}
                       {localize(item.title, lang)}
                     </div>
 
@@ -113,6 +114,7 @@ const dateBadge = formatDate(
 
                   <div class="schedule-content">
                     <div class="schedule-title">
+                      {item.label && `${t("program.session")} ${item.label}: `}
                       {localize(item.title, lang)}
                     </div>
 
