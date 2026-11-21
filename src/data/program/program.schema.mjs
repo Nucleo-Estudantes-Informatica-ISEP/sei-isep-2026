@@ -7,6 +7,9 @@ export const scheduleItemSchema = z.object({
   // {en, pt} pair (EasyChair-synced entries run through translate.ts, #97).
   title: localizedTextSchema,
   desc: localizedTextSchema.optional(),
+  // Parallel-track session number (e.g. "4A"), shown before the title as
+  // "Session 4A: ...". Not localized — the "Session" word comes from i18n.
+  label: z.string().min(1).optional(),
   tag: z.string().min(1).optional(),
   // Never localized — these are people's names and room codes.
   chair: z.string().min(1).optional(),

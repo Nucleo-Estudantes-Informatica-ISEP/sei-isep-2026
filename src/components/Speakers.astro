@@ -4,7 +4,6 @@ import { speakers } from "@/data/speakers/speakers";
 import { site } from "@/data/edition/edition";
 import { localize, useTranslations, type Lang } from "@/i18n/translations";
 import Button from "./Button.astro";
-import Tag from "./Tag.astro";
 
 interface Props {
   lang: Lang;
@@ -56,13 +55,6 @@ const description = t("speakers.description").replace(
     </section>
   ))
 }
-
-<section class="pending-slot">
-  <div class="pending-eyebrow">{t("speakers.pending.eyebrow")}</div>
-  <h2>{t("speakers.pending.title")}</h2>
-  <p>{t("speakers.pending.description")}</p>
-  <Tag tone="accent">{t("speakers.pending.status")}</Tag>
-</section>
 
 <section class="closing-cta">
   <div>
@@ -174,7 +166,6 @@ const description = t("speakers.description").replace(
     opacity: 0.7;
   }
   .speaker-detail p {
-    max-width: 600px;
     margin: 0 0 var(--space-7);
     font-size: var(--font-size-md);
     line-height: 1.8;
@@ -193,32 +184,6 @@ const description = t("speakers.description").replace(
     text-decoration: none;
   }
 
-  .pending-slot {
-    margin: var(--space-22) var(--space-14) 0;
-    padding: var(--space-16);
-    border-radius: 24px;
-    background: var(--color-surface);
-    text-align: center;
-  }
-  .pending-eyebrow {
-    margin-bottom: var(--space-4);
-    font-size: var(--font-size-2xs);
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.55;
-  }
-  .pending-slot h2 {
-    font-size: var(--font-size-32);
-    margin: 0 0 var(--space-4);
-  }
-  .pending-slot p {
-    max-width: 460px;
-    margin: 0 auto var(--space-6);
-    font-size: var(--font-size-sm);
-    line-height: 1.7;
-    opacity: 0.7;
-  }
   .closing-cta {
     display: flex;
     align-items: center;
@@ -253,12 +218,6 @@ const description = t("speakers.description").replace(
 
     .speaker-row.reversed .speaker-portrait {
       order: 0;
-    }
-
-    .pending-slot {
-      margin-left: var(--space-5);
-      margin-right: var(--space-5);
-      padding: var(--space-10) var(--space-5);
     }
 
     .closing-cta {

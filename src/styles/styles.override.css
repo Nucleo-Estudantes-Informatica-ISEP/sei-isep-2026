@@ -42,3 +42,17 @@
  * Motion:
  * --transition-fast.
  */
+
+:root {
+  /* accent palette derived from the banner colour (#004e3e = 700) */
+  --color-accent: #007059;
+  --color-accent-100: #ebfaf7;
+  --color-accent-200: #cdf4ec;
+  --color-accent-300: #95e4d4;
+  --color-accent-400: #41c8ac;
+  --color-accent-500: #0c977b;
+  --color-accent-600: #007059;
+  --color-accent-700: #004e3e;
+  --color-accent-800: #00382d;
+  --color-accent-900: #00261e;
+}

@@ -12,6 +12,7 @@ interface RawItem {
   time: string;
   title: string;
   kind: "session" | "break";
+  label?: string;
   tag?: string;
   chair?: string;
   room?: string;
@@ -25,6 +26,13 @@ function cleanTitle(rawTitle: string): string {
     .trim()
     .replace(/^["“](.+)["”]$/, "$1")
     .trim();
+}
+
+// Parallel-track sessions are numbered "4A", "4B", ... — the organisers want
+// that label shown before the title ("Sessão 4A: ..."). Plain "Session 1"
+// sessions keep showing just their title.
+function extractTrackLabel(rawTitle: string): string | undefined {
+  return rawTitle.match(/^Session\s+(\d+[A-Za-z])\b/i)?.[1].toUpperCase();
 }
 
 function collapseWhitespace(text: string): string {
@@ -86,7 +94,12 @@ export function parseEasyChairProgram(html: string): {
     if (!interval || !rawTitle) return;
 
     const time = interval.split("-")[0].trim();
-    const title = cleanTitle(rawTitle);
+    // Parallel-track sessions are titled just "Session 4A" — stripping the
+    // prefix would leave nothing, so keep the raw label in that case.
+    const title = cleanTitle(rawTitle) || rawTitle;
+    const label = cleanTitle(rawTitle)
+      ? extractTrackLabel(rawTitle)
+      : undefined;
     const tag = detectTag(title);
     const chair = collapseWhitespace(
       $el.find(".session_chair .chair_names").first().text(),
@@ -99,6 +112,7 @@ export function parseEasyChairProgram(html: string): {
       time,
       title,
       kind: "session",
+      ...(label && { label }),
       ...(tag && { tag }),
       ...(chair && { chair }),
       ...(room && { room }),
