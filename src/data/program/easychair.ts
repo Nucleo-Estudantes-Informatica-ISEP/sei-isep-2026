@@ -86,7 +86,9 @@ export function parseEasyChairProgram(html: string): {
     if (!interval || !rawTitle) return;
 
     const time = interval.split("-")[0].trim();
-    const title = cleanTitle(rawTitle);
+    // Parallel-track sessions are titled just "Session 4A" — stripping the
+    // prefix would leave nothing, so keep the raw label in that case.
+    const title = cleanTitle(rawTitle) || rawTitle;
     const tag = detectTag(title);
     const chair = collapseWhitespace(
       $el.find(".session_chair .chair_names").first().text(),
