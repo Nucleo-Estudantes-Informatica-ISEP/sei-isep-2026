@@ -5,6 +5,7 @@ import { localize, useTranslations, type Lang } from "@/i18n/translations";
 import Button from "./Button.astro";
 import { site } from "@/data/edition/edition";
 import Tag from "./Tag.astro";
+import { formatDate } from "@/lib/date";
 
 interface Props {
   lang: Lang;
@@ -12,6 +13,14 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+const symposiumDay = site.importantDates.find(
+  (d) => d.id === "symposiumDay",
+)?.date;
+const dateBadge = formatDate(
+  symposiumDay ?? null,
+  lang,
+  t("program.dateToBeAnnounced"),
+);
 ---
 
 <section class="program-page">
@@ -39,7 +48,7 @@ const t = useTranslations(lang);
         <div class="schedule-actions">
           <span class="date-badge">
             <span class="date-dot"></span>
-            {t("program.dateToBeAnnounced")}
+            {dateBadge}
           </span>
 
           {

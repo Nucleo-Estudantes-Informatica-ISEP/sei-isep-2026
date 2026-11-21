@@ -57,6 +57,10 @@ const importantDates = site.importantDates.map((entry, i) => ({
   value: formatDate(entry.date, lang, t("home.dates.tba")),
 }));
 
+const symposiumDay = site.importantDates.find(
+  (d) => d.id === "symposiumDay",
+)?.date;
+
 const featuredSpeakers = speakers.slice(0, 3);
 
 // Above-the-fold ticker reuses the same rows as the .dates list further
@@ -372,11 +376,17 @@ const datesTicker = importantDates.map((row) => `${row.label} · ${row.value}`);
   </h2>
   <p class="closing__subtitle">
     {
-      tt("home.closing.dateLocation", {
-        venue: site.venue.name,
-        city: site.venue.city,
-        country: site.venue.country,
-      })
+      tt(
+        symposiumDay
+          ? "home.closing.dateLocation"
+          : "home.closing.dateLocationTba",
+        {
+          date: formatDate(symposiumDay ?? null, lang, ""),
+          venue: site.venue.name,
+          city: site.venue.city,
+          country: site.venue.country,
+        },
+      )
     }
   </p>
   <div class="closing__actions">
